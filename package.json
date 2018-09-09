@@ -15,7 +15,8 @@
 		"method-override": "~2.1.2"
 	},
 	"author": "patelvijayg",
-	"license": "use""repository": {
+	"license": "use",
+	"repository": {
 		"type": "git",
 		"url": "https://github.com/patelvijayg/nodejs-app1.git"
 	}
