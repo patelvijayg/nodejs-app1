@@ -8,8 +8,10 @@ var str = "";
 app.route('/emp').get(function(req, res) {
    console.log("method called...");	
    MongoClient.connect(url, function(err, db) {
-       var collection = db.collection('Employee');
+       var collection = db.collection('myCollection');
+	    console.log("connect");	
        var cursor = collection.find({});
+	   console.log("collection");	
        str = "";
        cursor.forEach(function(item) {
            if (item != null) {
