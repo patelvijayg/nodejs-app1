@@ -4,7 +4,7 @@
 	"description": "Node.js sample app for OpenShift 3",
 	"main": "server2.js",
 	"scripts": {
-		"start": "node server2.js > my_app_log.log 2> my_app_err.log"
+		"start": "nodemon server2.js > my_app_log.log 2> my_app_err.log"
 	},
 	"dependencies": {
 		"express": "~4.7.2",
