@@ -15,6 +15,7 @@ app.get('/emp', function(req, res) {
        var cursor = collection.find({});
 	   console.log("collection");	
        str = "";
+		if(cursor !=null) { console.log(cursor)}
        cursor.forEach(function(item) {
            if (item != null) {
                    str = str + "    Employee id  " + item.Employeeid + "</br>";
