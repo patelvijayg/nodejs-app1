@@ -5,7 +5,7 @@ var url = 'mongodb://mongodb:27017/sampledb';
 
 var str = "";
 
-app.route('/Employeeid').get(function(req, res) {
+app.route('/emp').get(function(req, res) {
    console.log("method called...");	
    MongoClient.connect(url, function(err, db) {
        var collection = db.collection('Employee');
@@ -22,4 +22,10 @@ app.route('/Employeeid').get(function(req, res) {
        );
    });
 });
+
+app.get('/', function(req, res) {
+    res.send('Hello from NodeJS  at '+ new Date());
+});
+
+
 var server = app.listen(8080, function() {});
