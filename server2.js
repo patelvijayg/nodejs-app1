@@ -1,12 +1,14 @@
 var express = require('express');
 var app = express();
 var MongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://mongodb:27017/sampledb';
+var url = 'mongodb://mongo@mongo:mongodb:27017/sampledb';
 
 var str = "";
 
-app.route('/emp').get(function(req, res) {
-   console.log("method called...");	
+
+
+app.get('/emp', function(req, res) {
+	console.log("emp method called...");	
    MongoClient.connect(url, function(err, db) {
        var collection = db.collection('myCollection');
 	    console.log("connect");	
