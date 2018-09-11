@@ -26,6 +26,7 @@ app.route('/emp').get(function(req, res) {
 });
 
 app.get('/', function(req, res) {
+	console.log("hello method called...");	
     res.send('Hello from NodeJS  at '+ new Date());
 });
 
