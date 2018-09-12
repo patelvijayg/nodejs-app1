@@ -8,7 +8,7 @@ var str = "";
 
 
 app.route('/emp').get(function(req, res) {
-	console.log("emp method called...");	
+	console.log("emp method called...!!!");	
    MongoClient.connect(url, function(err, db) {
        var collection = db.collection('myCollection');
 	    console.log("connect");	
@@ -18,7 +18,7 @@ app.route('/emp').get(function(req, res) {
 		if(cursor !=null) { console.log(cursor)}
        cursor.forEach(function(item) {
            if (item != null) {
-                   str = str + "    Employee id  " + item.Employeeid + "</br>";
+                   str = str + " new   Employee id  " + item.Employeeid + "</br>";
            }
        }, function(err) {
            res.send(str);
