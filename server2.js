@@ -7,7 +7,7 @@ var str = "";
 
 
 
-app.route('/emp', function(req, res) {
+app.route('/emp').get(function(req, res) {
 	console.log("emp method called...");	
    MongoClient.connect(url, function(err, db) {
        var collection = db.collection('myCollection');
