@@ -7,12 +7,12 @@
 		"start": "nodemon server2.js > my_app_log.log 2> my_app_err.log"
 	},
 	"dependencies": {
-		"express": "~4.7.2",
-		"mongoose": "~3.6.2",
-		"mongodb": "~2.2.19",
-		"morgan": "~1.2.2",
+		"express": "^4.7.4",
 		"body-parser": "~1.5.2",
-		"method-override": "~2.3.10"
+		"method-override": "~2.3.10",
+		"mongodb": "~2.2.19",
+		"mongoose": "~3.6.2",
+		"morgan": "~1.2.2"
 	},
 	"author": "patelvijayg",
 	"license": "use",
