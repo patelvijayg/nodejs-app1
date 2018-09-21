@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
-const url = 'mongodb://mongodb:mongodb@mongodb:27017/sampledb';
+const url = 'mongodb://localhost:27017/sampledb';
+//const url = 'mongodb://mongodb:mongodb@mongodb:27017/sampledb';
 
 const str = "";
 
@@ -13,11 +14,12 @@ app.route('/emp').get(function(req, res) {
 	    console.log("connect");	
        var cursor = collection.find({});
 	   console.log("collection");	
-       str = "";
+       var str = "";
 		if(cursor !=null) { console.log(cursor)}
        cursor.forEach(function(item) {
            if (item != null) {
-                   str = str + " new   Employee id  " + item.Employeeid + "</br>";
+                   str = str + " new   Employee id  " + item['Employeeid'] + "</br>";
+                   str = str + " name  " + item['name'] + "</br>";
            }
        }, function(err) {
            res.send(str);
