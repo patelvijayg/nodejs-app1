@@ -1,10 +1,9 @@
-var express = require('express');
-var app = express();
-var MongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://mongo:mongo@mongodb:27017/sampledb';
+const express = require('express');
+const app = express();
+const MongoClient = require('mongodb').MongoClient;
+const url = 'mongodb://mongodb:mongodb@mongodb:27017/sampledb';
 
-var str = "";
-
+const str = "";
 
 
 app.route('/emp').get(function(req, res) {
@@ -35,3 +34,11 @@ app.get('/', function(req, res) {
 
 
 var server = app.listen(8080, function() {});
+
+
+//npm install --save-dev express
+//npm install --save-dev mongodb
+//mongo --host 172.17.0.6 --port 27017 -u "mongodb" -p "mongodb" --authenticationDatabase "sampledb"
+//use sampledb
+//db.myCollection.insert({"name":"vijay","Employeeid":"10"})
+//db.auth("mongodb","mongodb")
