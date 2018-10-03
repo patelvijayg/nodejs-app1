@@ -4,7 +4,7 @@ const MongoClient = require('mongodb').MongoClient;
 
 //const url = 'mongodb://localhost:27017/sampledb';
 //const url = 'mongodb://mongodb:mongodb@mongodb:27017/sampledb';
-const url = mongodb://mongodb1:mongodb1@ds121753.mlab.com:21753/sampledb
+const url = "mongodb://mongodb1:mongodb1@ds121753.mlab.com:21753/sampledb"
 const str = "";
 
 
