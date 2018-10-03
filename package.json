@@ -2,9 +2,9 @@
 	"name": "nodejsapp1",
 	"version": "0.0.1",
 	"description": "Node.js sample app for OpenShift 3",
-	"main": "server1.js",
-	"_scripts": {
-		"start": "nodemon server2.js > my_app_log.log 2> my_app_err.log"
+	"main": "server2.js",
+	"scripts": {
+		"start": "node server2.js"
 	},
 	"dependencies": {
 		"body-parser": "~1.5.2",
